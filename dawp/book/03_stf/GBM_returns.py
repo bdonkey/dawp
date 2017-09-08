@@ -80,26 +80,26 @@ def simulate_gbm():
 # Return Sample Statistics and Normality Tests
 
 def print_statistics(data):
-    print "RETURN SAMPLE STATISTICS"
-    print "---------------------------------------------"
-    print "Mean of Daily  Log Returns %9.6f" % np.mean(data['returns'])
-    print "Std  of Daily  Log Returns %9.6f" % np.std(data['returns'])
-    print "Mean of Annua. Log Returns %9.6f" % (np.mean(data['returns']) * 252)
-    print "Std  of Annua. Log Returns %9.6f" % \
-                (np.std(data['returns']) * math.sqrt(252))
-    print "---------------------------------------------"
-    print "Skew of Sample Log Returns %9.6f" % scs.skew(data['returns'])
-    print "Skew Normal Test p-value   %9.6f" % scs.skewtest(data['returns'])[1]
-    print "---------------------------------------------"
-    print "Kurt of Sample Log Returns %9.6f" % scs.kurtosis(data['returns'])
-    print "Kurt Normal Test p-value   %9.6f" % \
-                scs.kurtosistest(data['returns'])[1]
-    print "---------------------------------------------"
-    print "Normal Test p-value        %9.6f" % \
-                scs.normaltest(data['returns'])[1]
-    print "---------------------------------------------"
-    print "Realized Volatility        %9.6f" % data['rea_vol'].iloc[-1]
-    print "Realized Variance          %9.6f" % data['rea_var'].iloc[-1]
+    print("RETURN SAMPLE STATISTICS")
+    print("---------------------------------------------")
+    print("Mean of Daily  Log Returns %9.6f" % np.mean(data['returns']))
+    print("Std  of Daily  Log Returns %9.6f" % np.std(data['returns']))
+    print("Mean of Annua. Log Returns %9.6f" % (np.mean(data['returns']) * 252))
+    print("Std  of Annua. Log Returns %9.6f" % \
+                (np.std(data['returns']) * math.sqrt(252)))
+    print("---------------------------------------------")
+    print("Skew of Sample Log Returns %9.6f" % scs.skew(data['returns']))
+    print("Skew Normal Test p-value   %9.6f" % scs.skewtest(data['returns'])[1])
+    print("---------------------------------------------")
+    print("Kurt of Sample Log Returns %9.6f" % scs.kurtosis(data['returns']))
+    print("Kurt Normal Test p-value   %9.6f" % \
+                scs.kurtosistest(data['returns'])[1])
+    print("---------------------------------------------")
+    print("Normal Test p-value        %9.6f" % \
+                scs.normaltest(data['returns'])[1])
+    print("---------------------------------------------")
+    print("Realized Volatility        %9.6f" % data['rea_vol'].iloc[-1])
+    print("Realized Variance          %9.6f" % data['rea_var'].iloc[-1])
 
 #
 # Graphical Output

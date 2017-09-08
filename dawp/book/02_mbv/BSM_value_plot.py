@@ -12,7 +12,9 @@ mpl.rcParams['font.family'] = 'serif'
 
 # Import Valuation Function from Chapter 5 
 import sys
-sys.path.append('05_com')
+import os
+# sys.path.append('05_com')
+sys.path.append(os.path.join(os.path.dirname(sys.path[0]),'05_com'))
 from BSM_option_valuation import BSM_call_value
 
 # Model and Option Parameters
@@ -37,3 +39,4 @@ plt.grid(True)
 plt.legend(loc=0)
 plt.xlabel('index level $S_0$')
 plt.ylabel('present value $C(t=0)$')
+plt.show()
